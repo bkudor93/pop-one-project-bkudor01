@@ -39,30 +39,40 @@ def test_string_to_location():
     assert string_to_location('A1') == (0,0)
     #eventually add at least one more exception test and two more
     #test with correct inputs
-
+    assert string_to_location('A5') == (0,4)
+    
 def test_location_to_string():
-    # Replace with tests
+    set_board(board1)
+    assert location_to_string (0,4) == ('A5')
 
 def test_at():
-    # Replace with tests
+    set_board(board1)
+    assert test_at (0,0) == '-'
+
 
 def test_all_locations():
-    # Replace with tests
+    set_board(board1)
+    assert all_location([0,1]) == [0,1]
 
 def test_adjacent_location():
-    # Replace with tests
+    set_board(board1)
+    assert adjacent_location((0,0), 'right') == (0,1)
     
 def test_is_legal_move_by_musketeer():
-    # Replace with tests
+    set_board(board1)
+    assert is_legal_move_by_muskateer((2,3), 'right') == True
     
 def test_is_legal_move_by_enemy():
-    # Replace with tests
+    set_board(board1)
+    assert is_legal_move_by_enemy((2,1), 'right') == True
 
 def test_is_legal_move():
-    # Replace with tests
+    set_board(board1)
+    assert is_legal_move((2,2), 'left') == True
 
 def test_can_move_piece_at():
-    # Replace with tests
+    set_board(board1)
+    assert can_move_piece_at (2,2) == True
 
 def test_has_some_legal_move_somewhere():
     set_board(board1)
@@ -72,24 +82,32 @@ def test_has_some_legal_move_somewhere():
     # with at least one additional board
 
 def test_possible_moves_from():
-    # Replace with tests
+    set_board(board1)
+    assert possible_moves_from (1,1) == ('left')
 
 def test_is_legal_location():
-    # Replace with tests
+    set_board(board1)
+    assert is_legal_location (1,1) == True
 
 def test_is_within_board():
-    # Replace with tests
+    set_board(board1)
+    assert is_within_board((1,1), 'right') == True
 
 def test_all_possible_moves_for():
-    # Replace with tests
+    set_board(board1)
+    assert all_possible_moves_for ('M') == [(0,2), 'left']
     
 def test_make_move():
-    # Replace with tests
-    
+    set_board(board1)
+    assert make_move((1,1), 'right') == (1,2)
+        
 def test_choose_computer_move():
     # Replace with tests; should work for both 'M' and 'R'
+    set_board(board1)
+    assert computer_move ('M') == ((2,2), 'left')
 
 def test_is_enemy_win():
-    # Replace with tests
+   set_board(board1)
+   assert is_enemy_win () == True
 
 
