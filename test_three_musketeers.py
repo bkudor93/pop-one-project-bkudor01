@@ -41,10 +41,12 @@ def test_string_to_location():
     #test with correct inputs
 
 def test_location_to_string():
+            
     # Replace with tests
 
 def test_at():
-    # Replace with tests
+            set_board(board1)
+            assert test_at (0,0) == _
 
 def test_all_locations():
     # Replace with tests
