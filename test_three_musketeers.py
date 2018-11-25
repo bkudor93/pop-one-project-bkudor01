@@ -49,7 +49,6 @@ def test_at():
     set_board(board1)
     assert test_at (0,0) == '-'
 
-
 def test_all_locations():
     set_board(board1)
     assert all_location([0,1]) == [0,1]
