@@ -353,6 +353,7 @@ def start():
                 f = open('save.txt','w')
                 f.write("\n".join((str(board1), str(users_side))))
                 f.close()
+                exit()
             
             move_musketeer(users_side)
             print_board()

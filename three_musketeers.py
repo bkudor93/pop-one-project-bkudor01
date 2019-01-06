@@ -325,4 +325,4 @@ def start():
         else:
             print ("The Musketeers win!")
             break
-             
+start()            
